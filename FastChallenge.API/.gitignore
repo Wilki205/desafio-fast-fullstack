@@ -1,0 +1,20 @@
+# Pastas de compilação do .NET
+[Bb]in/
+[Oo]bj/
+
+# Arquivos de usuário e configurações locais
+*.user
+*.suo
+*.sln.docstates
+
+# Arquivos gerados pelo Rider
+.idea/
+*.sln.iml
+
+# Arquivos de log e banco de dados local
+*.log
+*.db
+*.db-journal
+
+# Configurações de ambiente de desenvolvimento
+appsettings.Development.json
