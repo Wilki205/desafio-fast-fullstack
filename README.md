@@ -4,7 +4,7 @@
 
 ![Status](https://img.shields.io/badge/status-conclu%C3%ADdo-brightgreen)
 
-Este projeto foi desenvolvido como parte do desafio técnico para a vaga de Pessoa Desenvolvedora FullStack na FAST Soluções[cite: 2]. [cite_start]O objetivo é criar uma aplicação web completa para gerenciar e rastrear a participação de colaboradores em workshops trimestrais, fornecendo uma interface para visualização de dados e métricas de engajamento[cite: 5, 9, 10, 11].
+Este projeto foi desenvolvido como parte do desafio técnico para a vaga de Pessoa Desenvolvedora FullStack na FAST Soluções[cite: 2]. O objetivo é criar uma aplicação web completa para gerenciar e rastrear a participação de colaboradores em workshops trimestrais, fornecendo uma interface para visualização de dados e métricas de engajamento[cite: 5, 9, 10, 11].
 
 ---
 
