@@ -1,10 +1,11 @@
-# Desafio Fast - FullStack
+# 💻 Desafio Fast - FullStack
 
-## Rastreamento de Participação em Workshops
+## 🧭 Rastreamento de Participação em Workshops
 
 ![Status](https://img.shields.io/badge/status-conclu%C3%ADdo-brightgreen)
 
-Este projeto foi desenvolvido como parte do desafio técnico para a vaga de Pessoa Desenvolvedora FullStack na FAST Soluções. O objetivo é criar uma aplicação web completa para gerenciar e rastrear a participação de colaboradores em workshops trimestrais, fornecendo uma interface para visualização de dados e métricas de engajamento.
+Este projeto foi desenvolvido como parte do desafio técnico para a vaga de **Pessoa Desenvolvedora FullStack** na **FAST Soluções**.
+O objetivo é criar uma aplicação web completa para gerenciar e rastrear a participação de colaboradores em workshops trimestrais, fornecendo uma interface para visualização de dados e métricas de engajamento.
 
 ---
 
@@ -12,70 +13,131 @@ Este projeto foi desenvolvido como parte do desafio técnico para a vaga de Pess
 
 O projeto foi além dos requisitos básicos, implementando todos os bônus e funcionalidades extras para criar uma aplicação robusta e completa.
 
-### Backend (API REST em C# / .NET)
+### 🔧 Backend (API REST em C# / .NET)
 
-**CRUD Completo:** Endpoints para Criar, Ler, Atualizar e Excluir (`CRUD`) para as entidades `Colaboradores` e `Workshops`. 
-**Sistema de Autenticação e Autorização:** Todos os endpoints (exceto o de login) são protegidos usando **JWT (JSON Web Tokens)**.
-**Gerenciamento de Presença:** Endpoint dedicado para registrar a participação de um colaborador em um workshop.
-**Consultas Avançadas:** O endpoint de detalhes do workshop (`GET /api/workshops/{id}`) retorna o objeto completo, incluindo a lista de colaboradores participantes.
-**DTOs (Data Transfer Objects):** Uso de DTOs para moldar as respostas da API, evitando loops de referência e expondo apenas os dados necessários.
-**Documentação Interativa:** A API é totalmente documentada e testável via **Swagger/OpenAPI**, incluindo a configuração para autenticação JWT. 
+* **CRUD Completo:** Endpoints para Criar, Ler, Atualizar e Excluir (`CRUD`) para as entidades `Colaboradores` e `Workshops`.
+* **Autenticação e Autorização com JWT:** Todos os endpoints (exceto login) são protegidos com **JSON Web Tokens**.
+* **Gerenciamento de Presença:** Endpoint dedicado para registrar a participação de um colaborador em um workshop.
+* **Consultas Avançadas:** Uso de **DTOs** para retornar objetos completos, como a lista de participantes em um workshop.
+* **Documentação Interativa:** API documentada via **Swagger/OpenAPI**, incluindo autenticação JWT.
 
-### Frontend (Angular)
+### 🖥️ Frontend (Angular)
 
 * **Sistema de Autenticação Completo:** Telas e lógica para **Login** e **Logout**.
-* **Proteção de Rotas (Route Guards):** As páginas internas da aplicação são protegidas e só podem ser acessadas por usuários autenticados.
-* **Layout Profissional e Responsivo:** A interface se adapta a diferentes tamanhos de tela, de desktops a dispositivos móveis.
-* **CRUD Completo na Interface:**
-    * Gerenciamento total de **Colaboradores** (Criar, Editar e Excluir) diretamente pela interface.
-    * Gerenciamento total de **Workshops** (Criar, Editar e Excluir) diretamente pela interface.
-**Visualização de Detalhes:** Tela dedicada para exibir os detalhes de um workshop, incluindo a lista de participantes e um botão para voltar à lista anterior.
-**Adição de Presença:** Funcionalidade na tela de detalhes para adicionar um novo participante a um workshop.
-**Dashboard com Gráficos (Bônus):**
-  **Gráfico de Pizza** na tela de detalhes, mostrando a proporção de participantes vs. ausentes.
-  **Gráfico de Barras** em uma página de Dashboard, mostrando a quantidade total de workshops que cada colaborador participou.
+* **Proteção de Rotas:** Páginas internas só acessíveis por usuários autenticados.
+* **Layout Responsivo:** Interface adaptável a diferentes tamanhos de tela.
+* **CRUD Completo:**
+
+  * Gerenciamento total de **Colaboradores** (Criar, Editar e Excluir).
+  * Gerenciamento total de **Workshops** (Criar, Editar e Excluir).
+* **Tela de Detalhes:** Exibe participantes de um workshop e botão para retornar.
+* **Adição de Presença:** Inclusão de novos participantes direto na tela de detalhes.
+* **Dashboard com Gráficos (Bônus):**
+
+  * **Gráfico de Pizza:** Mostra a proporção de participantes.
+  * **Gráfico de Barras:** Exibe quantos workshops cada colaborador participou.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-#### **Backend**
+### Backend
+
 * C# e .NET 8
 * ASP.NET Core Web API
 * Entity Framework Core 8
-* SQLite (Banco de Dados Relacional)
-* Autenticação com JWT (JSON Web Tokens)
+* SQLite
+* Autenticação com JWT
 
-#### **Frontend**
+### Frontend
+
 * Angular 17+
 * TypeScript
 * SCSS
-* ng2-charts (Chart.js) para visualização de dados
-
-#### **Ferramentas e Boas Práticas**
-* Git e GitHub para versionamento de código
-* Padrão de DTOs (Data Transfer Objects) no back-end
-* Serviços e Interceptores HTTP no Angular
-* Componentes Standalone e Estrutura com Layouts
-* Design Responsivo (CSS Grid, Flexbox, Media Queries)
+* ng2-charts (Chart.js)
 
 ---
 
 ## 🚀 Como Executar o Projeto
 
-Siga os passos abaixo para rodar a aplicação localmente.
+### 🔹 Pré-requisitos
 
-### Pré-requisitos
 * [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
 * [Node.js e NPM](https://nodejs.org/) (versão LTS recomendada)
-* [Angular CLI](https://angular.io/cli) (`npm install -g @angular/cli`)
+* [Angular CLI](https://angular.io/cli) → `npm install -g @angular/cli`
 
-### 1. Clonando o Repositório
+---
 
-Primeiro, clone o repositório para a sua máquina local:
+### 🔹 1. Clonando o Repositório
 
 ```bash
-git clone [https://github.com/Wilki205/desafio-fast-fullstack.git](https://github.com/Wilki205/desafio-fast-fullstack.git)
+git clone https://github.com/Wilki205/desafio-fast-fullstack.git
 
-# Em seguida, navegue para a pasta do projeto
+# Em seguida, navegue até a pasta do projeto
 cd desafio-fast-fullstack
+```
+
+---
+
+### 🔹 2. Configuração do Backend (API)
+
+```bash
+# Navegue até a pasta do projeto da API
+cd FastChallenge.API
+
+# Instale as dependências
+dotnet restore
+
+# Inicie o servidor da API
+dotnet run
+```
+
+A API estará disponível em: **[http://localhost:5171](http://localhost:5171)**
+
+---
+
+### 🔹 3. Configuração do Frontend (App)
+
+```bash
+# Navegue até a pasta do projeto do Angular
+cd FastChallenge-App
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento do Angular
+ng serve
+```
+
+A aplicação estará acessível em: **[http://localhost:4200](http://localhost:4200)**
+
+---
+
+### 🔹 4. Credenciais de Teste
+
+| Usuário | Senha        |
+| ------- | ------------ |
+| fast    | desafio@2025 |
+
+---
+
+## 📸 Screenshots
+
+* **Tela de Login**
+* **Lista de Workshops**
+* **Dashboard (Gráfico de Barras)**
+* **Detalhes de Workshop (Gráfico de Pizza)**
+* **Versão Mobile (Responsiva)**
+
+---
+
+## 🏁 Status do Projeto
+
+✅ Concluído e 100% funcional, com todas as features implementadas e testadas.
+
+---
+
+## 👨‍💻 Autor
+
+**Wilkison Bruno Barbosa de Souza**
+🔗 [GitHub](https://github.com/Wilki205)
