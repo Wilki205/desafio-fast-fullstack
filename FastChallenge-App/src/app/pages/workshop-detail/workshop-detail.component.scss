@@ -1,0 +1,86 @@
+.back-button {
+  background-color: transparent;
+  color: #3498db;
+  border: 1px solid #3498db;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+.add-participant-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.chart-container {
+  width: 400px;
+  margin: 0 auto; 
+}
+
+@media (max-width: 768px) {
+  .chart-container {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+.form-inline {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.form-inline select,
+.form-inline .action-button {
+  height: 48px;
+  padding: 0 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.form-inline select {
+  flex-grow: 1;
+}
+
+.action-button {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.action-button.primary {
+  background-color: #28a745;
+  border: 1px solid #28a745;
+}
+
+.action-button.primary:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 400px) {
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch; 
+  }
+
+  .form-inline select,
+  .form-inline .action-button {
+    width: 100%; 
+  }
+}

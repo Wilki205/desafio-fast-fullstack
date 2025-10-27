@@ -1,0 +1,14 @@
+<header class="header">
+  <nav class="nav">
+    <div class="nav-links">
+      <a routerLink="/colaboradores">Colaboradores</a>
+      <a routerLink="/workshops">Oficinas</a>
+      <a routerLink="/dashboard">Dashboard</a>
+    </div>
+    <button (click)="logout()" class="logout-button">Sair</button>
+  </nav>
+</header>
+
+<main class="main-content">
+  <router-outlet></router-outlet>
+</main>

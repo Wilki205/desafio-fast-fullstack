@@ -1,0 +1,11 @@
+<button (click)="goBack()" class="back-button">&larr; Voltar</button>
+
+<h2>{{ pageTitle }}</h2>
+
+<form (ngSubmit)="onSubmit()" class="form-container">
+  <div class="form-group">
+    <label for="nome">Nome do Colaborador</label>
+    <input type="text" id="nome" name="nome" [(ngModel)]="colaborador.nome" required>
+  </div>
+  <button type="submit" class="action-button primary">Salvar</button>
+</form>

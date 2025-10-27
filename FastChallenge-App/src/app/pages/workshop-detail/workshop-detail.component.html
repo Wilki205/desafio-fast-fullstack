@@ -1,0 +1,50 @@
+<button (click)="goBack()" class="back-button">
+  &larr; Voltar para a Lista
+</button>
+
+<div *ngIf="workshop">
+  <h1>{{ workshop.nome }}</h1>
+  <p><strong>Data de Realização:</strong> {{ workshop.dataRealizacao | date:'dd/MM/yyyy' }}</p>
+  <p><strong>Descrição:</strong> {{ workshop.descricao }}</p>
+
+  <hr>
+
+  <h2>Participantes</h2>
+
+  <ul *ngIf="workshop.colaboradores && workshop.colaboradores.length > 0">
+    <li *ngFor="let colaborador of workshop.colaboradores">
+      {{ colaborador.nome }}
+    </li>
+  </ul>
+  <p *ngIf="!workshop.colaboradores || workshop.colaboradores.length === 0">
+    Nenhum colaborador participou deste workshop ainda.
+  </p>
+
+  <div class="add-participant-container">
+    <h3>Adicionar Novo Participante</h3>
+    <div class="form-inline">
+      <select [(ngModel)]="colaboradorSelecionadoId">
+        <option [ngValue]="null" disabled>Selecione um colaborador</option>
+        <option *ngFor="let colab of todosColaboradores" [value]="colab.id">
+          {{ colab.nome }}
+        </option>
+      </select>
+      <button (click)="adicionarParticipante()" class="action-button primary">
+        Adicionar
+      </button>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Gráfico de Participação</h2>
+
+  <div *ngIf="workshop.colaboradores" class="chart-container">
+    <canvas baseChart
+      [data]="pieChartData"
+      [type]="pieChartType"
+      [options]="pieChartOptions"
+      [legend]="pieChartLegend">
+    </canvas>
+  </div>
+</div>

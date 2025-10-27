@@ -1,0 +1,29 @@
+<div class="page-header">
+  <h2>Lista de Workshops</h2>
+  <a routerLink="/workshops/novo" class="action-button primary">
+    + Novo Workshop
+  </a>
+</div>
+
+<div class="card-container">
+  <div class="card" *ngFor="let workshop of workshops">
+    <div class="card-header">
+      <h3>{{ workshop.nome }}</h3>
+    </div>
+    <div class="card-body">
+      <p><strong>Data:</strong> {{ workshop.dataRealizacao | date:'dd/MM/yyyy' }}</p>
+      <p class="description">{{ workshop.descricao }}</p>
+    </div>
+    <div class="card-actions">
+      <a [routerLink]="['/workshops/editar', workshop.id]" class="action-button">
+        Editar
+      </a>
+      <a [routerLink]="['/workshops', workshop.id]" class="action-button details">
+        Ver Detalhes
+      </a>
+      <button (click)="excluirWorkshop(workshop.id)" class="action-button danger">
+        Excluir
+      </button>
+    </div>
+  </div>
+</div>

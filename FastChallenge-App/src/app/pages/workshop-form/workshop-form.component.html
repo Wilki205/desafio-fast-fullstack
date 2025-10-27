@@ -1,0 +1,22 @@
+<button (click)="goBack()" class="back-button">&larr; Voltar</button>
+
+<h2>{{ pageTitle }}</h2>
+
+<form (ngSubmit)="onSubmit()" class="form-container">
+  <div class="form-group">
+    <label for="nome">Nome do Workshop</label>
+    <input type="text" id="nome" name="nome" [(ngModel)]="workshop.nome" required>
+  </div>
+
+  <div class="form-group">
+    <label for="data">Data de Realização</label>
+    <input type="date" id="data" name="data" [(ngModel)]="workshop.dataRealizacao" required>
+  </div>
+
+  <div class="form-group">
+    <label for="descricao">Descrição</label>
+    <textarea id="descricao" name="descricao" rows="4" [(ngModel)]="workshop.descricao"></textarea>
+  </div>
+
+  <button type="submit" class="action-button primary">Salvar</button>
+</form>

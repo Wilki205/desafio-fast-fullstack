@@ -1,0 +1,25 @@
+<div class="page-header">
+  <h2>Lista de Colaboradores</h2>
+  <a routerLink="/colaboradores/novo" class="action-button primary">
+    + Novo Colaborador
+  </a>
+</div>
+
+<div class="card-container">
+  <div class="card" *ngFor="let colaborador of colaboradores">
+    <div class="card-body collaborator-body">
+      <h3>{{ colaborador.nome }}</h3>
+      <p>ID: {{ colaborador.id }}</p>
+    </div>
+
+    <div class="card-actions">
+      <a [routerLink]="['/colaboradores/editar', colaborador.id]" class="action-button">
+        Editar
+      </a>
+
+      <button (click)="excluirColaborador(colaborador.id)" class="action-button danger">
+        Excluir
+      </button>
+    </div>
+  </div>
+</div>

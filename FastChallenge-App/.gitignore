@@ -1,0 +1,12 @@
+# Dependências e cache
+/node_modules
+/.angular/cache
+npm-debug.log
+
+# Arquivos de build/distribuição
+/dist
+/www
+
+# Arquivos de log e temporários
+*.log
+.DS_Store

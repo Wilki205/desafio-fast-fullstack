@@ -1,0 +1,11 @@
+<h2>Dashboard de Participação</h2>
+<p>Quantidade de workshops que cada colaborador participou.</p>
+
+<div class="chart-container">
+  <canvas baseChart
+    [data]="barChartData"
+    [options]="barChartOptions"
+    [type]="barChartType"
+    [legend]="barChartLegend">
+  </canvas>
+</div>
